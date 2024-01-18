@@ -1,0 +1,26 @@
+Configuracion Inicial
+
+    echo Laptop_Arch > /etc/hostname
+    ln -sf /usr/share/zoneinfo/America/Bogota /etc/localtime
+    locale-gen
+    hwclock -w
+    echo KEYMAP=la-latin1 > /etc/vconsole.conf
+    passwd 582873
+    useradd -m -G wheel -s /bin/bash Arlz --badname
+    passwd Arlz 128/e980
+    vim /etc/sudoers 
+        %wheel ALL=(ALL:ALL) ALL
+
+
+Grub Config
+    grub-install --target=x86_64-efi --bootloader-id=Grub-UEFI --recheck --removable
+    grub-mkconfig -o /boot/grub/grub.cfg
+
+Instalation
+    linux-lts linux-firmware linux-lts-headers linux-lts-docs base-lts 
+    nvidia-lts xf86-video-intel intel-ucode xorg xorg-server xorg-xinit mesa mesa-demos
+    sudo networkmanager net-tools blueman alsa alsa-mixer pipewire pipewire-alsa pipewire-pulse brightnessctl
+    dunst qtile lightdm lightdm-gtk-greeter
+    bat lsd neovim ranger git lynx tx unzip
+
+    

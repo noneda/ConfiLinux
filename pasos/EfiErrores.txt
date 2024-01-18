@@ -1,0 +1,17 @@
+
+efibootmgr -v
+grub-reboot
+efibootmgr --help
+update-grub
+efibootmgr --help
+efibootmgr -v
+efibootmgr
+history
+grub-install --target=x86_64-efi --bootloader-id=Grub-UEFI --recheck --removable
+efibootmgr
+efibootmgr -o 2,1,2001
+reboot
+efibootmgr
+efibootmgr -b 2 -B
+efibootmgr -o 0,1,2001
+Reboot
